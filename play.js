@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         '2': {
             title: 'Momen Saat Jalan Jalan ke Kamojanggg',
-            source: 'assets/video/video3.mp4',
+            source: 'assets/video/video4.mp4',
             description: 'Menghabiskan waktu bersama di Kamojag, menikmati keindahan alam dan moment berharga.'
         }
     };
