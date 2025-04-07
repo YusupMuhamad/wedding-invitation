@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Plyr
+    const player = new Plyr('#mainVideo', {
+        controls: [
+            'play-large',
+            'play',
+            'progress',
+            'current-time',
+            'duration',
+            'mute',
+            'volume',
+            'settings',
+            'pip',
+            'fullscreen'
+        ],
+        settings: ['quality', 'speed'],
+        speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 2] },
+        tooltips: { controls: true, seek: true },
+        keyboard: { focused: true, global: true }
+    });
+
     // Get video ID from URL
     const urlParams = new URLSearchParams(window.location.search);
     const videoId = urlParams.get('v');
@@ -6,14 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Video data mapping
     const videoData = {
         '1': {
-            title: 'Momen Sesi Foto Wedding Yusup & Wulan',
-            source: 'assets/videos/prewed1.mp4',
-            description: 'Momen indah saat sesi foto prewedding kami di lokasi yang menakjubkan.'
+            title: 'Bersama Si Cantik',
+            source: 'assets/video/video4.mp4',
+            description: 'Beberapa moemen menyenangkan saat bersama sama di beberapa lokasi.'
         },
         '2': {
-            title: 'Vlog jalan jalan ke pantai pangandaran',
-            source: 'assets/videos/prewed2.mp4',
-            description: 'Menghabiskan waktu bersama di Pantai Pangandaran, menikmati keindahan alam dan moment berharga.'
+            title: 'Momen Saat Jalan Jalan ke Kamojanggg',
+            source: 'assets/video/video3.mp4',
+            description: 'Menghabiskan waktu bersama di Kamojag, menikmati keindahan alam dan moment berharga.'
         }
     };
     
@@ -22,8 +42,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const data = videoData[videoId];
         document.querySelector('.video-title').textContent = data.title;
         document.querySelector('.video-description p').textContent = data.description;
-        document.querySelector('#mainVideo source').src = data.source;
-        document.querySelector('#mainVideo').load();
+        
+        // Update source and reload for Plyr
+        const source = document.querySelector('#mainVideo source');
+        source.src = data.source;
+        player.source = {
+            type: 'video',
+            sources: [{
+                src: data.source,
+                type: 'video/mp4'
+            }]
+        };
     }
 
     // Comments functionality

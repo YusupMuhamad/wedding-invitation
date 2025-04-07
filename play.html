@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Video - Yusup & Wulan Wedding</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/play.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -32,9 +33,8 @@
     <main class="play-content">
         <div class="video-container">
             <div class="video-player">
-                <video id="mainVideo" controls>
+                <video id="mainVideo" playsinline controls>
                     <source src="" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-details">
@@ -69,6 +69,8 @@
         </div>
     </main>
 
+    <!-- Add Plyr JS before your play.js -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
     <script src="play.js"></script>
 </body>
 </html>
