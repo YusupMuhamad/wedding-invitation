@@ -1,0 +1,161 @@
+.rsvp-content {
+    padding-top: 76px;
+    min-height: 100vh;
+}
+
+.rsvp-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.rsvp-card {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.rsvp-card h2 {
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rsvp-message {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rsvp-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #FF7A86;
+}
+
+.attendance-summary {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.attendance-summary h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.summary-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.disclaimer {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.guest-list {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.guest-list h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.guest-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.guest-name {
+    font-weight: 500;
+    color: black;
+}
+
+.guest-status {
+    color: #666;
+}
+
+.guest-status.hadir {
+    color: #4CAF50;
+}
+
+.guest-status.tidak-hadir {
+    color: #f44336;
+}
+
+.guest-status.ragu {
+    color: #FF9800;
+}
+
+@media (max-width: 768px) {
+    .rsvp-card {
+        padding: 20px;
+    }
+
+    .summary-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

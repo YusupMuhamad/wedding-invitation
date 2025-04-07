@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Kehadiran - Yusup & Wulan Wedding</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/rsvp.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="left-section">
+            <i class="material-icons menu-icon" id="menu-btn">menu</i>
+            <img src="assets/img/wedding-logo.png" class="youtube-logo" alt="Wedding Logo">
+        </div>
+        <div class="middle-section">
+            <input type="text" placeholder="Cari momen" class="search-bar">
+            <button class="search-button">
+                <i class="material-icons">search</i>
+            </button>
+        </div>
+        <div class="right-section">
+            <a href="index.html" class="back-button">
+                <i class="material-icons">arrow_back</i>
+                <span>Kembali</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="rsvp-content">
+        <div class="rsvp-container">
+            <div class="rsvp-card">
+                <h2>Konfirmasi Kehadiran</h2>
+                <p class="rsvp-message">Mohon konfirmasi kehadiran Anda di acara pernikahan kami</p>
+                
+                <form id="rsvpForm" class="rsvp-form">
+                    <div class="form-group">
+                        <input type="text" id="guestName" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="attendance" required>
+                            <option value="" disabled selected>Konfirmasi Kehadiran</option>
+                            <option value="hadir">Hadir</option>
+                            <option value="tidak_hadir">Tidak Hadir</option>
+                            <option value="ragu">Masih Ragu</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <i class="material-icons">how_to_reg</i>
+                        Konfirmasi
+                    </button>
+                </form>
+
+                <div class="attendance-summary">
+                    <h3>Rekap Konfirmasi</h3>
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Hadir</span>
+                            <span class="stat-value" id="hadirCount">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Tidak Hadir</span>
+                            <span class="stat-value" id="tidakHadirCount">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Ragu-ragu</span>
+                            <span class="stat-value" id="raguCount">0</span>
+                        </div>
+                    </div>
+                    <p class="disclaimer">*Perhitungan ini tidak menentukan total kehadiran tamu undangan</p>
+                </div>
+
+                <div class="guest-list">
+                    <h3>Daftar Konfirmasi</h3>
+                    <div id="guestListContainer">
+                        <!-- Guest list will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/rsvp.js"></script>
+</body>
+</html>

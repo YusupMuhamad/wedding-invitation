@@ -1,0 +1,120 @@
+.gift-content {
+    padding-top: 76px;
+    min-height: 100vh;
+}
+
+.gift-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gift-card {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.gift-card h2 {
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.gift-message {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.qris-container {
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px dashed var(--primary-color);
+    border-radius: 12px;
+}
+
+.qris-image {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.copy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+    background-color: #FF7A86;
+}
+
+.bank-details {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.bank-details > p {
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.bank-account {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.bank-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.account-info {
+    flex: 1;
+}
+
+.account-number {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.account-name {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .gift-container {
+        padding: 15px;
+    }
+
+    .gift-card {
+        padding: 30px 20px;
+    }
+
+    .qris-image {
+        max-width: 250px;
+    }
+}

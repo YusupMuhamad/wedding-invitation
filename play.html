@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Video - Yusup & Wulan Wedding</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/play.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="left-section">
+            <i class="material-icons menu-icon" id="menu-btn">menu</i>
+            <img src="assets/img/wedding-logo.png" class="youtube-logo" alt="Wedding Logo">
+        </div>
+        <div class="middle-section">
+            <input type="text" placeholder="Cari momen" class="search-bar">
+            <button class="search-button">
+                <i class="material-icons">search</i>
+            </button>
+        </div>
+        <div class="right-section">
+            <a href="index.html" class="back-button">
+                <i class="material-icons">arrow_back</i>
+                <span>Kembali</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="play-content">
+        <div class="video-container">
+            <div class="video-player">
+                <video id="mainVideo" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-details">
+                <h1 class="video-title">Loading...</h1>
+                <div class="video-stats">
+                    <span class="upload-date">Coming Soon · December 2024</span>
+                </div>
+                <div class="channel-info">
+                    <img src="assets/img/couple-photo.jpg" alt="Channel Picture">
+                    <div class="channel-details">
+                        <h3>Yusup & Wulan</h3>
+                        <p>Our Wedding Journey</p>
+                    </div>
+                </div>
+                <div class="video-description">
+                    <p>Loading description...</p>
+                </div>
+
+                <!-- Add comment section -->
+                <div class="comment-section">
+                    <h3>Komentar</h3>
+                    <form id="commentForm" class="comment-form">
+                        <input type="text" id="commenterName" placeholder="Masukkan nama Anda" required>
+                        <textarea id="commentText" placeholder="Tulis komentar Anda..." required></textarea>
+                        <button type="submit" class="comment-submit">Kirim Komentar</button>
+                    </form>
+                    <div class="comments-container">
+                        <!-- Comments will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="play.js"></script>
+</body>
+</html>

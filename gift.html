@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Gift - Yusup & Wulan Wedding</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/gift.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="left-section">
+            <i class="material-icons menu-icon" id="menu-btn">menu</i>
+            <img src="assets/img/wedding-logo.png" class="youtube-logo" alt="Wedding Logo">
+        </div>
+        <div class="middle-section">
+            <input type="text" placeholder="Cari momen" class="search-bar">
+            <button class="search-button">
+                <i class="material-icons">search</i>
+            </button>
+        </div>
+        <div class="right-section">
+            <a href="index.html" class="back-button">
+                <i class="material-icons">arrow_back</i>
+                <span>Kembali</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="gift-content">
+        <div class="gift-container">
+            <div class="gift-card">
+                <h2>Digital Gift</h2>
+                <p class="gift-message">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.</p>
+                
+                <div class="qris-container">
+                    <img src="assets/img/qris-code.png" alt="QRIS Code" class="qris-image">
+                    <button class="copy-button" id="copyButton">
+                        <i class="material-icons">content_copy</i>
+                        Salin Nomor QRIS
+                    </button>
+                </div>
+
+                <div class="bank-details">
+                    <p>Atau transfer melalui rekening:</p>
+                    <div class="bank-account">
+                        <img src="assets/img/bca-logo.png" alt="BCA" class="bank-logo">
+                        <div class="account-info">
+                            <p class="account-number">1234567890</p>
+                            <p class="account-name">a.n Yusup</p>
+                        </div>
+                        <button class="copy-button" data-number="1234567890">
+                            <i class="material-icons">content_copy</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/gift.js"></script>
+</body>
+</html>

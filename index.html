@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="left-section">
+            <i class="material-icons menu-icon" id="menu-btn">menu</i>
+            <img src="assets/img/wedding-logo.png" class="youtube-logo" alt="Wedding Logo">
+            <!-- <h2 class="brand-text">Yusup & Wulan</h2> -->
+        </div>
+        <div class="middle-section">
+            <input type="text" placeholder="Cari momen" class="search-bar">
+            <button class="search-button">
+                <i class="material-icons">search</i>
+            </button>
+        </div>
+        <div class="right-section">
+            <a href="welcome.html" class="back-button">
+                <i class="material-icons">arrow_back</i>
+                <span>Kembali</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <a href="index.html" class="sidebar-link">
+                <i class="material-icons">home</i>
+                <span class="sidebar-text">Beranda</span>
+            </a>
+            <a href="location.html" class="sidebar-link">
+                <i class="material-icons">location_on</i>
+                <span class="sidebar-text">Lokasi</span>
+            </a>
+            <a href="gift.html" class="sidebar-link">
+                <i class="material-icons">card_giftcard</i>
+                <span class="sidebar-text">Gift</span>
+            </a>
+            <a href="rsvp.html" class="sidebar-link">
+                <i class="material-icons">how_to_reg</i>
+                <span class="sidebar-text">Kehadiran</span>
+            </a>
+        </nav>
+
+        <!-- Video Grid (Prewedding Gallery) -->
+        <div class="video-grid">
+            <!-- Prewedding Video/Photo Card -->
+            <div class="video-preview">
+                <a href="play.html?v=1" class="video-link">
+                    <div class="thumbnail-row">
+                        <img src="assets/img/prewed1.png" class="thumbnail" alt="Prewedding Photo">
+                        <div class="video-time">Cerita Kami Saat Ini</div>
+                    </div>
+                </a>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="/assets/img/couple-photo.jpg" alt="Couple Picture">
+                    </div>
+                    <div class="video-info">
+                        <a href="play.html?v=1" class="video-link">
+                            <p class="video-title">Momen Sesi Foto Wedding Yusup & Wulan</p>
+                        </a>
+                        <p class="channel-name">Yusup & Wulan</p>
+                        <p class="video-stats">Coming Soon · December 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-preview">
+                <a href="play.html?v=2" class="video-link">
+                    <div class="thumbnail-row">
+                        <img src="assets/img/prewed2.png" class="thumbnail" alt="Prewedding Photo">
+                        <div class="video-time">Cerita Masa Lalu</div>
+                    </div>
+                </a>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="/assets/img/couple-photo.jpg" alt="Couple Picture">
+                    </div>
+                    <div class="video-info">
+                        <a href="play.html?v=2" class="video-link">
+                            <p class="video-title">Vlog jalan jalan ke pantai pangandaran</p>
+                        </a>
+                        <p class="channel-name">Yusup & Wulan</p>
+                        <p class="video-stats">Coming Soon · December 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Add more prewedding content cards here -->
+        </div>
+    <!-- Add before the closing main tag -->
+        </div> <!-- closing video-grid -->
+        
+        <!-- Countdown Timer -->
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span id="days">00</span>
+                <span class="label">Hari</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">00</span>
+                <span class="label">Jam</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">00</span>
+                <span class="label">Menit</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">00</span>
+                <span class="label">Detik</span>
+            </div>
+        </div>
+    </main>
+<!-- Add this before closing body tag -->
+    <script src="script.js"></script>
+</body>
+</html>

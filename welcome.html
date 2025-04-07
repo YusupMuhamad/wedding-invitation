@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusup & Wulan Wedding</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="welcome-page">
+    <!-- Add audio element -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Add CD button -->
+    <div class="music-control">
+        <div class="cd-player" onclick="toggleMusic()">
+            <img src="/assets/img/cd.png" alt="CD Player" class="cd">
+        </div>
+    </div>
+
+    <div class="welcome-container">
+        <div class="welcome-card">
+            <!-- Add this section before the existing content -->
+            <div class="guest-section">
+                <p class="guest-label">Kepada Yth:</p>
+                <h2 class="guest-name">-</h2>
+                <p class="guest-location">-</p>
+            </div>
+
+            <h1 class="couple-names">Pernikahan</h1>
+            <div class="welcome-content">
+                <p class="arabic-greeting">Assalamu'alaikum Warahmatullah</p>
+                <p class="invitation-text">
+                    Dengan Rahmat Allah yang Maha Kuasa InsyaAllah kami akan melangsungkan pernikahan pada:
+                </p>
+                <div class="wedding-date">
+                    Selasa, 01 April 2025
+                </div>
+                <div class="wedding-venue">
+                    di Aula Masjid ABRI Cimahi - Jalan Gatot Subroto Kota Cimahi
+                </div>
+
+                <div class="bride-info">
+                    <h2>Wulan Apriliani</h2>
+                    <div class="couple-image">
+                        <img src="assets/img/couple-photo.jpg" alt="Wulan Apriliani">
+                    </div>
+                    <p class="child-of">Putri dari</p>
+                    <p class="parents">M Junaedi Arse & Entin</p>
+                </div>
+                
+
+                <!-- <div class="love-story">
+                    Maha kuasa Allah yang telah mempertemukan kami dalam sebuah moment yang tak direncanakan bertemu pada awal tahun 2012 lalu, wajah cantik Siti Salamah Azzahra dan pribadi yang santun itu masih teringat jelas dalam ingatan Adi. Sayang, tak sempat berbincang saat itu, dan waktupun berganti hari, berganti bulan dan berganti tahun, tidak ada komunikasi diantara kami, karena memang kami tak tau kabar masing-masing dan bisa dibilang belum begitu kenal.
+                </div> -->
+
+                <div class="groom-info">
+                    <h2>Yusup Muhamad</h2>
+                    <div class="couple-image">
+                        <img src="assets/img/couple-photo.jpg" alt="Yusup Muhamad">
+                    </div>
+                    <p class="child-of">Putra dari</p>
+                    <p class="parents">Enas Sutisna & Lena Herlani</p>
+                </div>
+
+                <!-- <div class="groom-description">
+                    Fasilitas ini digunakan untuk memberikan informasi yang lengkap tentang profile dari Mempelai Pria, silahkan masukan dengan lengkap dan jelas berikut dengan foto yang berkualitas bagus. Fasilitas ini digunakan untuk memberikan informasi yang lengkap tentang profile dari Mempelai Pria, silahkan masukan dengan lengkap dan jelas berikut dengan foto yang berkualitas bagus.
+                </div> -->
+
+                <!-- Add new invitation section -->
+                <div class="invitation-section">
+                    <h2 class="section-title">Undangan dan Acara</h2>
+                    <p class="invitation-desc">
+                        Bahagia rasanya apabila anda berkenan hadir dan memberikan doa restu kepada kami. Kami mengundang anda untuk hadir dalam acara resepsi pernikahan kami berikut ini
+                    </p>
+                    
+                    <div class="event-details">
+                        <div class="event-card">
+                            <h3>Akad Nikah</h3>
+                            <p class="event-time">12:00 - selesai</p>
+                            <p class="event-date">Selasa, 01 April 2025</p>
+                            <p class="event-location">Aula Masjid ABRI Cimahi - Jalan Gatot Subroto Kota Cimahi</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <h3>Resepsi Pernikahan</h3>
+                            <p class="event-time">12:00 - selesai</p>
+                            <p class="event-date">Sabtu, 17 Agustus 2024</p>
+                            <p class="event-location">Aula Masjid ABRI Cimahi - Jalan Gatot Subroto Kota Cimahi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ubah link enter-button menjadi fixed bottom -->
+                <div class="enter-button-container">
+                    <a href="index.html" class="enter-button">
+                        <span>Selengkapnya</span>
+                        <i class="material-icons">arrow_forward</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            const kepada = params.get('kepada');
+            
+            if (kepada) {
+                const [names, location] = kepada.split('-');
+                const decodedNames = decodeURIComponent(names);
+                const decodedLocation = decodeURIComponent(location || '');
+                
+                // Update the guest information
+                document.querySelector('.guest-name').textContent = decodedNames;
+                document.querySelector('.guest-location').textContent = `di ${decodedLocation}`;
+            } else {
+                // Set default values when no parameters are present
+                document.querySelector('.guest-name').textContent = 'Saudara/i';
+                document.querySelector('.guest-location').textContent = 'di Tempat';
+            }
+        }
+
+        // Run when page loads
+        window.addEventListener('load', getUrlParams);
+
+        // Music control
+        const audio = document.getElementById('bgMusic');
+        const cdPlayer = document.querySelector('.cd-player');
+        let isFirstClick = true;
+        
+        function toggleMusic() {
+            try {
+                if (isFirstClick) {
+                    audio.load(); // Reload audio on first click
+                    isFirstClick = false;
+                }
+                
+                if (audio.paused) {
+                    let playPromise = audio.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            cdPlayer.classList.add('playing');
+                        }).catch(error => {
+                            console.log("Playback failed:", error);
+                            cdPlayer.classList.remove('playing');
+                        });
+                    }
+                } else {
+                    audio.pause();
+                    cdPlayer.classList.remove('playing');
+                }
+            } catch (e) {
+                console.log("Music toggle error:", e);
+            }
+        }
+
+        // Remove the automatic click event listener
+        // Let user control when to start the music
+    </script>
+</body>
+</html>
