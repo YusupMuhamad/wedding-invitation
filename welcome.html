@@ -97,19 +97,28 @@
                 <!-- Tambahkan Gallery Section -->
                 <div class="gallery-section">
                     <h2 class="section-title">Galeri Foto</h2>
+                    <!-- Setelah gallery section, sebelum enter button -->
                     <div class="photo-grid">
-                        <div class="photo-item">
-                            <img src="assets/img/couple-photo.jpg" alt="Pre-wedding Photo 1">
+                        <div class="photo-item" onclick="openLightbox(0)">
+                            <img src="assets/img/photo1.jpg" alt="Pre-wedding Photo 1">
                         </div>
-                        <div class="photo-item">
-                            <img src="assets/img/couple-photo.jpg" alt="Pre-wedding Photo 2">
+                        <div class="photo-item" onclick="openLightbox(1)">
+                            <img src="assets/img/prewed1.png" alt="Pre-wedding Photo 2">
                         </div>
-                        <div class="photo-item">
-                            <img src="assets/img/couple-photo.jpg" alt="Pre-wedding Photo 3">
+                        <div class="photo-item" onclick="openLightbox(2)">
+                            <img src="assets/img/prewed2.png" alt="Pre-wedding Photo 3">
                         </div>
-                        <div class="photo-item">
+                        <div class="photo-item" onclick="openLightbox(3)">
                             <img src="assets/img/couple-photo.jpg" alt="Pre-wedding Photo 4">
                         </div>
+                    </div>
+                    
+                    <!-- Lightbox -->
+                    <div class="lightbox" id="lightbox">
+                        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+                        <img id="lightbox-img" src="" alt="Fullscreen Image">
+                        <button class="prev-btn" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="next-btn" onclick="changeImage(1)">&#10095;</button>
                     </div>
                 </div>
 
@@ -182,5 +191,7 @@
         // Remove the automatic click event listener
         // Let user control when to start the music
     </script>
+    <!-- Sebelum closing body tag -->
+    <script src="assets/js/gallery.js"></script>
 </body>
 </html>
